@@ -1,89 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; img-src data:; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
 <link rel="icon" href="data:,">
-<title>Te han compartido un documento | CyberLab Identity</title>
-<meta name="description" content="Recorrido educativo de cuatro pasos con alias ficticios y representaciones predefinidas. No acepta credenciales reales.">
-<link rel="stylesheet" href="../assets/training.css">
-<script src="../assets/training.js" defer></script>
+<meta name="description" content="Simulación educativa no oficial de CyberLab: Invitación de colaboración. Usa solo credenciales desechables sin acceso a sistemas reales.">
+<title>Invitación de colaboración | CyberLab Identity</title>
+<link rel="stylesheet" href="../assets/training.css"><script src="../assets/training.js" defer></script>
 </head>
-<body>
-<a class="skip-link" href="#main">Saltar al contenido</a>
-<div class="training-bar">AUTHORIZED SECURITY AWARENESS SIMULATION</div>
-<header class="site-header">
-  <a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">C</span><span><strong>CyberLab Identity</strong><small>CyberLab Experience · AttackAI</small></span></a>
-  <span class="lab-label">Laboratorio de concienciación</span>
-</header>
-<main id="main" class="scenario-main">
-  <div class="page-intro"><p class="eyebrow">AttackAI · Documento compartido</p><h1>Te han compartido un documento</h1><p class="lead">Una invitación ficticia de colaboración sirve de punto de partida. El documento y su propietario son ejemplos del laboratorio.</p></div>
-  <div class="experience-layout">
-    <div class="simulation" data-simulation>
-      <nav class="progress" aria-label="Progreso del recorrido">
-        <ol>
-          <li aria-current="step"><span class="step-number" aria-hidden="true">1</span><span>Invitación</span></li>
-          <li><span class="step-number" aria-hidden="true">2</span><span>Contraseña<br>simulada</span></li>
-          <li><span class="step-number" aria-hidden="true">3</span><span>MFA<br>simulado</span></li>
-          <li><span class="step-number" aria-hidden="true">4</span><span>Aprendizaje</span></li>
-        </ol>
-      </nav>
-      <p class="sr-only" role="status" aria-live="polite" aria-atomic="true" data-step-status>Paso 1 de 4.</p>
-      <section class="step-panel" data-step aria-labelledby="identity-title">
-        <p class="panel-kicker">PASO 1 DE 4 · DEMOSTRACIÓN</p>
-        <h2 id="identity-title" tabindex="-1">Revisa la invitación de demostración</h2>
-        <article class="document-card"><span class="document-icon" aria-hidden="true">PDF</span><div><h3>Documento compartido</h3><p class="document-name">Security_Report.pdf</p><p class="document-meta">Propietario: Colaboración externa de demostración</p><p class="document-meta">Estado: Compartido para revisión</p><p class="document-meta">No se abre ni descarga un archivo real.</p></div></article>
-        <div class="visual-field"><label class="field-label" for="demo-identity">Alias ficticio del laboratorio</label>
-          <select id="demo-identity" aria-describedby="alias-help" data-demo-identity>
-            <option value="demo-a">Alias de demostración A</option>
-            <option value="demo-b">Alias de demostración B</option>
-            <option value="demo-c">Alias de demostración C</option>
-          </select>
-          <p class="field-help" id="alias-help">Son personajes predefinidos, sin relación con una persona o cuenta real. No necesitas introducir tu identidad.</p>
-        </div>
-        <div class="actions"><button class="button button-primary" type="button" data-next>Continuar<span aria-hidden="true"> →</span></button></div>
-      </section>
-      <section class="step-panel" data-step aria-labelledby="password-title" hidden>
-        <p class="panel-kicker">PASO 2 DE 4 · SOLO VISUAL</p>
-        <h2 id="password-title" tabindex="-1">Contraseña simulada</h2>
-        <p class="description">Esta pantalla ilustra una solicitud de contraseña. No hay un campo para escribir y no se realiza ningún inicio de sesión.</p>
-        <div class="identity-chip"><span class="identity-avatar" aria-hidden="true">D</span><span><strong data-demo-label>Alias de demostración A</strong><small>Identidad ficticia · CyberLab Identity</small></span></div>
-        <div class="visual-field"><p class="field-label">Representación fija de una contraseña</p><div class="masked-display" role="img" aria-label="Doce caracteres enmascarados predefinidos. No es una contraseña real ni un campo editable."><span aria-hidden="true">••••••••••••</span><span class="fixed-tag" aria-hidden="true">PREDEFINIDA</span></div></div>
-        <p class="demo-note">No escribas ni compartas una contraseña real. Este botón únicamente avanza la demostración.</p>
-        <div class="actions"><button class="button button-secondary" type="button" data-back>Volver</button><button class="button button-primary" type="button" data-next>Simular inicio de sesión</button></div>
-      </section>
-      <section class="step-panel" data-step aria-labelledby="mfa-title" hidden>
-        <p class="panel-kicker">PASO 3 DE 4 · SOLO VISUAL</p>
-        <h2 id="mfa-title" tabindex="-1">MFA simulado</h2>
-        <p class="description">Estos seis indicadores son una ilustración fija. No representan un código válido y no aceptan interacción ni escritura.</p>
-        <div class="mfa-indicators" role="img" aria-label="Seis indicadores de MFA predefinidos y no editables. No se solicita un código real.">
-          <span aria-hidden="true">●</span><span aria-hidden="true">●</span><span aria-hidden="true">●</span><span aria-hidden="true">●</span><span aria-hidden="true">●</span><span aria-hidden="true">●</span>
-        </div>
-        <p class="demo-note">No envíes códigos OTP, tokens ni aprobaciones reales. No se ha enviado ninguna notificación a un dispositivo.</p>
-        <div class="actions"><button class="button button-secondary" type="button" data-back>Volver</button><button class="button button-primary" type="button" data-next>Continuar a la explicación</button></div>
-      </section>
-      <section class="step-panel education-panel" data-step aria-labelledby="education-title" hidden>
-        <p class="panel-kicker">PASO 4 DE 4 · RESULTADO EDUCATIVO</p>
-        <h2 id="education-title" tabindex="-1">Así habría ocurrido el robo de credenciales</h2>
-        <p class="description">Una invitación falsa puede usar la confianza en un documento compartido para introducir una verificación de cuenta innecesaria. En un ataque real, ese paso podría llevar a una página de captura. Aquí la invitación y la verificación son ficticias.</p>
-        <div class="safe-message"><strong>Aquí no se ha recogido ninguna credencial.</strong><p>La identidad es un alias fijo, la contraseña es una ilustración y el MFA son seis indicadores predefinidos. El recorrido no envía ni guarda datos.</p></div>
-        <h3 class="section-title">Lo que acabas de ver</h3>
-        <ol class="learning-sequence"><li><strong>Una identidad convincente.</strong> El aspecto corporativo puede generar una confianza que no está justificada.</li><li><strong>Una petición de contraseña.</strong> Un sitio malicioso podría recoger lo escrito; aquí solo viste caracteres fijos.</li><li><strong>Una segunda verificación.</strong> Una petición de MFA también puede ser engañosa. Aquí no se solicitó ni aceptó ningún código.</li></ol>
-        <h3 class="section-title">Señales que conviene reconocer</h3>
-        <div class="indicators"><article class="indicator"><h3>Recurso inesperado</h3><p>¿Esperabas este documento y a este remitente? Confirma la invitación por un canal habitual.</p></article>
-<article class="indicator"><h3>Identidad del propietario</h3><p>El nombre del documento o del propietario no demuestra que la invitación sea legítima.</p></article>
-<article class="indicator"><h3>Destino de la aplicación</h3><p>Abre el espacio de colaboración conocido y comprueba allí si existe el recurso.</p></article>
-<article class="indicator"><h3>Verificación fuera de contexto</h3><p>Una solicitud inesperada de contraseña o MFA después de una invitación merece una revisión independiente.</p></article></div>
-        <section class="analysis" aria-labelledby="analysis-title"><h3 id="analysis-title">En el Experience Room</h3><p>Relaciona estas señales con el análisis del remitente, el contexto y el destino del mensaje en FortiMail Workspace. El ejercicio muestra patrones de engaño; no intenta evadir controles de seguridad.</p></section>
-        <div class="actions final-actions"><button class="button button-secondary" type="button" data-back>Volver</button><button class="button button-primary" type="button" data-restart>Reiniciar recorrido</button></div>
-        <p class="return-link"><a href="../index.html">Ver los otros escenarios</a></p>
-      </section>
-    </div>
-    <aside class="safety-aside" aria-labelledby="safety-title"><span class="badge">SIMULACIÓN AUTORIZADA</span><h2 id="safety-title">Practicar sin datos reales</h2><p>Todo el recorrido ocurre en esta página, con elementos predefinidos.</p><ul class="safety-list"><li>Alias ficticios del laboratorio</li><li>Contraseña no editable</li><li>Seis indicadores MFA fijos</li><li>Sin autenticación real</li></ul><p class="aside-note">No escribas información personal ni uses credenciales reales. No se abre ni descarga ningún documento.</p></aside>
+<body class="premium-page reference-layout theme-collaboration">
+<a class="premium-skip" href="#lab-identity">Saltar al login de laboratorio</a>
+<header class="premium-header"><a class="premium-brand" href="../index.html"><span class="premium-mark" aria-hidden="true">C</span><span><strong>CyberLab</strong><small>EXPERIENCE ROOM</small></span></a><span class="premium-environment"><span aria-hidden="true">●</span> Simulación autorizada · Sin autenticación real</span></header>
+<main class="premium-main">
+  <div class="experience-frame">
+    <aside class="story-pane" aria-labelledby="story-title"><div class="story-content">
+      <div class="service-reference"><p class="reference-kicker">3. SAAS NOTIFICATION</p><span class="brand-lockup"><span class="google-word" role="img" aria-label="Google"><span aria-hidden="true" class="google-blue">G</span><span aria-hidden="true" class="google-red">o</span><span aria-hidden="true" class="google-yellow">o</span><span aria-hidden="true" class="google-blue">g</span><span aria-hidden="true" class="google-green">l</span><span aria-hidden="true" class="google-red">e</span></span><span class="workspace-name">Workspace</span></span><span class="unofficial-label">SIMULACIÓN EDUCATIVA · NO OFICIAL</span></div>
+      
+      <h2 id="story-title">Se ha compartido<br>un archivo contigo</h2>
+      <p class="story-description">Una notificación de colaboración te invita a abrir un archivo. Verifica quién lo comparte y adónde conduce.</p>
+      
+      <ul class="reference-benefits"><li><span class="benefit-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3h7l4 4v14H6V3h1m7 0v5h5M9 12h6m-6 4h6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Accede a documentos compartidos</span></li><li><span class="benefit-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3h7l4 4v14H6V3h1m7 0v5h5M9 12h6m-6 4h6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Edita y colabora en línea</span></li><li><span class="benefit-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3h7l4 4v14H6V3h1m7 0v5h5M9 12h6m-6 4h6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Verifica el contexto y los permisos</span></li></ul>
+      <div class="story-footnote">Diseño original de CyberLab. No es un portal oficial de Google Workspace ni está vinculado con ese servicio.</div>
+    </div></aside>
+    <div class="auth-pane">
+      <section class="portal" id="initialView" aria-labelledby="initialTitle"><div class="portal-card">
+        <div class="identity-brand"><span class="brand-lockup"><span class="google-word" role="img" aria-label="Google"><span aria-hidden="true" class="google-blue">G</span><span aria-hidden="true" class="google-red">o</span><span aria-hidden="true" class="google-yellow">o</span><span aria-hidden="true" class="google-blue">g</span><span aria-hidden="true" class="google-green">l</span><span aria-hidden="true" class="google-red">e</span></span></span></div>
+        <p class="auth-scenario">LABORATORIO · NO ES UN ACCESO OFICIAL</p>
+        <h1 id="initialTitle">Iniciar sesión</h1><p class="description auth-description">Explora una invitación de colaboración del laboratorio.</p>
+        <div class="lab-login" lang="es" data-lab-login>
+  
+  
+  <div class="visual-field"><label class="field-label" for="lab-identity">Correo de prueba</label>
+    <span class="input-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span><input placeholder="usuario@laboratorio.invalid" id="lab-identity" type="email" required autocomplete="off" autocapitalize="none" spellcheck="false" inputmode="email" aria-describedby="identity-help disposable-warning" data-lab-identity>
+    <p class="field-help" id="identity-help">Solo correo de prueba. No se enviará ningún mensaje.</p>
   </div>
-  <noscript><section class="safe-message"><h2>La lección, sin interacción</h2><p>Activa JavaScript para recorrer los cuatro pasos. En un ataque real, una página convincente podría pedirte una contraseña y después un código MFA. Verifica siempre el remitente y el dominio por un canal conocido. Esta página no acepta credenciales reales.</p></section></noscript>
+  <div class="visual-field"><label class="field-label" for="lab-demo-password">Contraseña de prueba</label>
+    <span class="input-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 10V7a5 5 0 0110 0v3" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="5" y="10" width="14" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 14v3" stroke="currentColor" stroke-width="1.5"/></svg></span><input placeholder="Contraseña de prueba" id="lab-demo-password" type="password" required autocomplete="off" spellcheck="false" aria-describedby="demo-key-help disposable-warning" data-demo-password>
+    <p class="field-help" id="demo-key-help">Clave desechable; se descarta al pulsar el botón.</p>
+  </div>
+  <p class="demo-note">Sin autenticación real. Los campos se vacían al continuar.</p>
+  <p class="login-error" role="alert" data-login-error hidden>Introduce un correo de prueba válido y una contraseña desechable. Por seguridad, ambos campos se han vaciado.</p>
+  <button class="cta" type="button" data-lab-submit aria-controls="educationView" disabled>Iniciar sesión</button><div class="demo-warning" id="disposable-warning"><strong>Solo credenciales desechables de laboratorio.</strong><p>Sin acceso a sistemas reales. Nunca uses cuentas personales, corporativas ni contraseñas reutilizadas.</p></div>
+  <p class="portal-footer">CyberLab Identity · CyberLab Experience</p>
+  <noscript><p class="demo-note">Esta demostración requiere JavaScript local. No introduzcas credenciales con JavaScript desactivado.</p></noscript>
+</div>
+      </div></section>
+      <section class="education-card" id="educationView" aria-labelledby="educationTitle" hidden><span class="badge">Resultado educativo</span><h1 id="educationTitle" tabindex="-1">Verifica antes de abrir una invitación</h1><p class="description">Este recorrido ilustra una solicitud engañosa en un laboratorio autorizado. No hubo un acceso real al servicio ni se enviaron los datos escritos.</p><section class="lab-outcome" lang="es" aria-labelledby="lab-outcome-title"><h2 id="lab-outcome-title">Se introdujeron credenciales de prueba</h2><p class="lab-result">Se completaron los campos de la simulación y sus valores se descartaron inmediatamente al pulsar «Iniciar sesión». No se muestran, registran, almacenan ni transmiten los datos escritos. No hubo autenticación real.</p><p>En un sitio malicioso, un atacante podría registrar lo escrito al pulsar el botón y tratar de usarlo para acceder a una cuenta. Por eso debes comprobar el dominio y nunca reutilizar credenciales en una demostración.</p><button class="example-toggle" type="button" data-show-capture-example aria-controls="capture-example" aria-expanded="false">Mostrar ejemplo ficticio de captura</button><section class="capture-example" id="capture-example" aria-labelledby="capture-example-title" hidden><h3 id="capture-example-title" tabindex="-1">Ejemplo ficticio predefinido · No es tu información</h3><p>Los siguientes datos son texto fijo del laboratorio. No proceden de lo que acabas de escribir ni representan una captura real.</p><dl><dt>Usuario ficticio</dt><dd>persona-demo@example.invalid</dd><dt>Clave ficticia</dt><dd>CLAVE-FICTICIA-DE-EJEMPLO</dd></dl></section></section><div class="safe-message" lang="es"><strong>La simulación ha terminado.</strong><br>No se ha enviado ninguna solicitud de autenticación. La contraseña escrita no se muestra ni se conserva.</div><h2>Señales que conviene reconocer</h2><div class="indicators"><article class="indicator"><h3>Unexpected shared resource</h3><p>Treat unexpected document shares and application invitations with care.</p></article>
+<article class="indicator"><h3>Sender identity</h3><p>Confirm who sent the collaboration notification using a trusted communication channel.</p></article>
+<article class="indicator"><h3>Application destination</h3><p>Check the destination domain and open your known collaboration workspace directly.</p></article>
+<article class="indicator"><h3>Context</h3><p>Ask whether you expected this document, owner, or invitation before taking action.</p></article>
+</div><section class="analysis"><h3>FortiMail Workspace Analysis</h3><p>In the Experience Room, review how FortiMail Workspace analyzes sender identity, message context, destination URLs and other indicators associated with this scenario.</p></section><button class="cta restart-lab" type="button" lang="es" data-lab-restart>Reiniciar demostración</button><div class="education-footer"><span>Simulation scenario: saas-notification<br>Generated by AttackAI</span><a href="../index.html">Volver a los escenarios</a></div></section>
+
+    </div>
+  </div>
 </main>
-<footer class="site-footer">CyberLab Experience · Generated by AttackAI · Simulación educativa autorizada</footer>
+<footer class="premium-footer"><strong>CyberLab Security Awareness Training</strong><span>AUTHORIZED SECURITY AWARENESS SIMULATION · AttackAI</span></footer>
 </body>
 </html>

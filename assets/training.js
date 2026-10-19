@@ -1,52 +1,64 @@
 'use strict';
 (() => {
-  const simulation = document.querySelector('[data-simulation]');
-  if (!simulation) return;
-  const panels = Array.from(simulation.querySelectorAll('[data-step]'));
-  const markers = Array.from(simulation.querySelectorAll('.progress li'));
-  const status = simulation.querySelector('[data-step-status]');
-  const identity = simulation.querySelector('[data-demo-identity]');
-  const aliases = Object.freeze({
-    'demo-a': 'Alias de demostración A',
-    'demo-b': 'Alias de demostración B',
-    'demo-c': 'Alias de demostración C'
-  });
-  let currentStep = 0;
-  // Only predefined fictional aliases are selectable; no editable credential fields.
-  function updateAlias() {
-    if (!Object.prototype.hasOwnProperty.call(aliases, identity.value)) identity.value = 'demo-a';
-    simulation.querySelectorAll('[data-demo-label]').forEach((label) => {
-      label.textContent = aliases[identity.value];
-    });
+  const login = document.querySelector('[data-lab-login]');
+  if (!login) return;
+  const initialView = document.getElementById('initialView');
+  const educationView = document.getElementById('educationView');
+  const identity = login.querySelector('[data-lab-identity]');
+  const password = login.querySelector('[data-demo-password]');
+  const submit = login.querySelector('[data-lab-submit]');
+  const error = login.querySelector('[data-login-error]');
+  const exampleButton = document.querySelector('[data-show-capture-example]');
+  const example = document.getElementById('capture-example');
+
+  function clearFields() {
+    password.value = '';
+    identity.value = '';
   }
-  function showStep(index, moveFocus = true) {
-    currentStep = Math.max(0, Math.min(index, panels.length - 1));
-    panels.forEach((panel, position) => { panel.hidden = position !== currentStep; });
-    markers.forEach((marker, position) => {
-      if (position === currentStep) marker.setAttribute('aria-current', 'step');
-      else marker.removeAttribute('aria-current');
-      marker.classList.toggle('is-complete', position < currentStep);
-    });
-    const heading = panels[currentStep].querySelector('h2');
-    status.textContent = `Paso ${currentStep + 1} de ${panels.length}: ${heading.textContent}`;
+  function showLogin(moveFocus = true) {
+    clearFields();
+    error.hidden = true;
+    example.hidden = true;
+    exampleButton.setAttribute('aria-expanded', 'false');
+    educationView.hidden = true;
+    initialView.hidden = false;
+    submit.disabled = false;
     if (moveFocus) {
-      heading.focus({ preventScroll: true });
-      simulation.scrollIntoView({ block: 'start', behavior: 'instant' });
+      identity.focus({ preventScroll: true });
+      initialView.scrollIntoView({ block: 'start', behavior: 'instant' });
     }
   }
-  function restart(moveFocus = true) {
-    identity.value = 'demo-a';
-    updateAlias();
-    showStep(0, moveFocus);
+  function showEducation() {
+    // Retain only a boolean from native validity checks, never input strings.
+    const completed = identity.validity.valid && password.validity.valid;
+    clearFields();
+    if (!completed) {
+      error.hidden = false;
+      identity.focus();
+      return;
+    }
+    error.hidden = true;
+    initialView.hidden = true;
+    educationView.hidden = false;
+    educationView.querySelector('h1').focus({ preventScroll: true });
+    educationView.scrollIntoView({ block: 'start', behavior: 'instant' });
   }
-  identity.addEventListener('change', updateAlias);
-  simulation.addEventListener('click', (event) => {
-    const button = event.target.closest('button');
-    if (!button || !simulation.contains(button)) return;
-    if (button.hasAttribute('data-next')) showStep(currentStep + 1);
-    if (button.hasAttribute('data-back')) showStep(currentStep - 1);
-    if (button.hasAttribute('data-restart')) restart();
+  submit.addEventListener('click', showEducation);
+  login.addEventListener('input', () => { error.hidden = true; });
+  // Enter behaves like the button, without a form or a server submission.
+  login.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' && (event.target === identity || event.target === password)) {
+      event.preventDefault();
+      showEducation();
+    }
   });
-  window.addEventListener('pageshow', (event) => { if (event.persisted) restart(false); });
-  restart(false);
+  exampleButton.addEventListener('click', () => {
+    example.hidden = !example.hidden;
+    exampleButton.setAttribute('aria-expanded', String(!example.hidden));
+    if (!example.hidden) example.querySelector('h3').focus({ preventScroll: true });
+  });
+  document.querySelector('[data-lab-restart]').addEventListener('click', () => showLogin());
+  window.addEventListener('pagehide', clearFields);
+  window.addEventListener('pageshow', () => showLogin(false));
+  showLogin(false);
 })();
