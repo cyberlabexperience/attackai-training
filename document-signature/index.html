@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
+<link rel="icon" href="data:,">
+<title>Revisión documental | CyberLab Experience</title>
+<meta name="description" content="Simulación educativa de revisión documental. Sin credenciales, datos personales ni firmas legales.">
+<link rel="stylesheet" href="../assets/document-signature.css">
+<script src="../assets/document-signature.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#page-title">Saltar al contenido</a>
+<header class="site-header"><a class="brand" href="../">CyberLab <span>Experience</span></a><span class="lab-badge">SIMULACIÓN EDUCATIVA AUTORIZADA</span></header>
+<main class="workspace">
+  <aside class="narrative" aria-labelledby="story-title">
+    <p class="eyebrow">EXPERIENCE ROOM / DOCUMENT SECURITY</p>
+    <div class="service-reference">DocuSign<span>Referencia al escenario educativo</span></div>
+    <h2 id="story-title">Antes de confirmar,<br>revisa el contexto.</h2>
+    <p>Una invitación a firmar puede parecer rutinaria. Aprende a verificar el remitente, el documento y el destino antes de actuar.</p>
+    <div class="envelope-art" aria-hidden="true"><div class="paper-art"><span>CYBERLAB / DEMO</span><strong>Documento<br>para revisión</strong><i></i><i></i><i></i><div class="stamp">SIN VALIDEZ LEGAL</div></div><div class="envelope-label">LAB-SIGN-DEMO-0001</div></div>
+    <div class="independence"><strong>Laboratorio independiente</strong><p>CyberLab Experience no está afiliado a DocuSign. No es una página oficial ni un servicio de firma electrónica.</p></div>
+  </aside>
+  <div class="stage">
+    <nav class="progress" aria-label="Progreso de la simulación"><ol><li data-progress="invite" aria-current="step">1. Invitación</li><li data-progress="review">2. Revisión</li><li data-progress="result">3. Aprendizaje</li></ol></nav>
+    <section class="card" id="invite" aria-labelledby="page-title">
+      <p class="eyebrow">INVITACIÓN DE DEMOSTRACIÓN</p>
+      <h1 id="page-title" tabindex="-1">Tienes un documento de prueba para revisar</h1>
+      <p class="lead">Hola, participante de laboratorio. Explora una notificación ficticia sin iniciar sesión ni proporcionar información.</p>
+      <div class="document-summary"><span class="doc-icon" aria-hidden="true">DOC<br>DEMO</span><div><strong>Acuerdo_Colaboracion_DEMO.pdf</strong><p>Documento ilustrativo · Solo lectura</p></div></div>
+      <dl class="metadata"><div><dt>Remitente ficticio</dt><dd>CyberLab Document Services<br>document-training@example.com</dd></div><div><dt>Destinatario de demostración</dt><dd>demo-review@example.com</dd></div><div><dt>Fecha de demostración</dt><dd>19 de octubre de 2026 · Fecha ficticia</dd></div><div><dt>Estado</dt><dd>Pendiente de revisión · Simulación</dd></div><div><dt>Referencia</dt><dd>LAB-SIGN-DEMO-0001</dd></div></dl>
+      <div class="notice"><strong>No estás firmando un contrato.</strong> No se solicitan nombres, firmas, contraseñas ni datos personales. Todo el contenido es ficticio.</div>
+      <button class="primary" id="open-document" type="button" aria-controls="review" disabled>Abrir documento de demostración</button>
+      <noscript><p>Activa JavaScript para recorrer la demostración. No se solicita información.</p></noscript>
+      <p class="disclaimer">Simulación educativa de CyberLab Experience. No es una comunicación oficial de DocuSign.</p>
+    </section>
+    <section class="card" id="review" aria-labelledby="review-title" hidden>
+      <p class="eyebrow">VISTA PREVIA / SOLO LECTURA</p>
+      <h1 id="review-title" tabindex="-1">Revisa el documento y las señales</h1>
+      <article class="demo-document" aria-labelledby="document-title"><div class="document-topline">CYBERLAB EXPERIENCE <span>DEMO · SIN VALIDEZ LEGAL</span></div><h2 id="document-title">Acuerdo de colaboración de laboratorio</h2><p class="document-ref">LAB-SIGN-DEMO-0001 · 19 de octubre de 2026 (fecha ficticia)</p><h3>1. Finalidad del ejercicio</h3><p>Las entidades ficticias Equipo Aurora y Proyecto Nube participan en una actividad educativa para reconocer notificaciones de firma inesperadas.</p><h3>2. Alcance de la revisión</h3><p>Este documento no crea obligaciones, no representa una transacción y no permite realizar una firma legal. No requiere descargas ni datos del participante.</p><div class="unsigned">Confirmación de lectura simulada<br><strong>No se genera ni registra una firma</strong></div></article>
+      <h2 class="section-title">Marca las tres comprobaciones educativas</h2><p class="hint" id="checks-help">Cada botón solo cambia una selección temporal en pantalla. No se guarda ni se envía.</p>
+      <div class="risk-checks" aria-describedby="checks-help">
+        <button class="risk-check" type="button" data-risk aria-pressed="false"><span aria-hidden="true" class="check-mark">✓</span><span><strong>Identidad del remitente</strong>Reconocer que el nombre visible y el estilo no demuestran quién envía el documento.</span></button>
+        <button class="risk-check" type="button" data-risk aria-pressed="false"><span aria-hidden="true" class="check-mark">✓</span><span><strong>Contexto del documento</strong>Verificar si esperaba esta invitación y confirmar su contexto por un canal conocido.</span></button>
+        <button class="risk-check" type="button" data-risk aria-pressed="false"><span aria-hidden="true" class="check-mark">✓</span><span><strong>Destino del enlace</strong>Comprobar el dominio completo; HTTPS por sí solo no acredita la identidad del servicio.</span></button>
+      </div>
+      <p class="selection-status" id="selection-status" role="status">0 de 3 comprobaciones revisadas</p>
+      <button class="primary" id="confirm-review" type="button" aria-controls="result" aria-describedby="confirmation-note" disabled>Completar confirmación ficticia</button>
+      <p class="hint" id="confirmation-note">Solo completa este ejercicio. No acepta condiciones ni produce una firma legal.</p>
+      <button class="secondary" id="back-invite" type="button" aria-controls="invite">Volver a la invitación</button>
+    </section>
+    <section class="card" id="result" aria-labelledby="result-title" hidden>
+      <p class="eyebrow">SIMULACIÓN COMPLETADA</p>
+      <h1 id="result-title" tabindex="-1">Revisar antes de actuar hace la diferencia</h1>
+      <p class="lead">Una supuesta solicitud de firma puede utilizarse como pretexto para conseguir clics, credenciales o información. En este ejercicio no se ha firmado, recopilado ni enviado nada.</p>
+      <ul class="learning-points"><li><strong>Comprueba al remitente.</strong> Revisa la dirección real y no solo la marca o el nombre visible.</li><li><strong>Confirma el contexto.</strong> Una invitación no esperada merece verificación por un canal habitual, especialmente si genera urgencia.</li><li><strong>Revisa el destino.</strong> Evita introducir credenciales o descargar documentos desde enlaces inesperados.</li><li><strong>FortiMail Workspace Analysis.</strong> Revisa el análisis del mensaje y sus enlaces con el facilitador. Esta página no analiza mensajes ni se conecta a FortiMail.</li></ul>
+      <div class="notice"><strong>Confirmación educativa, no firma legal.</strong> Las selecciones no persisten. No se crea un certificado, contrato, registro ni archivo de firma.</div>
+      <button class="primary" id="restart-document" type="button" aria-controls="invite">Reiniciar simulación</button>
+      <p class="disclaimer">CyberLab Experience · Laboratorio independiente. No afiliado a DocuSign.</p>
+    </section>
+  </div>
+</main>
+<footer class="site-footer"><strong>CyberLab Security Awareness Training</strong><span>Datos ficticios · Sin autenticación, recopilación ni firmas reales</span></footer>
+</body></html>
